@@ -9,15 +9,16 @@ namespace YaLlega.Entities
 {
     internal class User
     {
-        public int id { get; set; }
+        [Key]
+        public int Id { get; set; }
         [Required]
-        public string name { get; set; }
-        public string lastName { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
         [Required]
         [EmailAddress]
-        public string email { get; set; }
+        public string Email { get; set; }
         [Required]
-        public string password { get; set; }
-        public string address { get; set; }
+        public string Password { get; set; }
+        public Restaurant Restaurant { get; set; }
     };
 }
