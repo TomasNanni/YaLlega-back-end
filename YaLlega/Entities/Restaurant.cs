@@ -27,5 +27,10 @@ namespace YaLlega.Entities
         [Required]
         public string Contact { get; set; }
         public ICollection<Category> Categories{ get; set; } = new List<Category>();
+
+        public int CartId { get; set; }
+        [ForeignKey("CartId")]
+        public Cart Cart { get; set; }
+
     }
 }

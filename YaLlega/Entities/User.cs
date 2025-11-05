@@ -19,15 +19,14 @@ namespace YaLlega.Entities
         [Required]
         public string LastName { get; set; }
         [Required]
+        [EmailAddress]
         public string EmailAdress { get; set; }
         [Required]
         [PasswordPropertyText]
         public string Password { get; set; }
         [ForeignKey("RestaurantId")]
-        public Restaurant Restaurant { get; set; }
-        public int RestaurantId { get; set; }
-        [ForeignKey("CartId")]
-        public Cart Cart { get; set; }
-        public int CartId { get; set; }
+        public Restaurant ?Restaurant { get; set; }
+        public int ?RestaurantId { get; set; }
+
     }
 }
